@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ProductsList from './ProductsList';
 import AddProductForm from './AddProductForm';
+import './App.css';
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -34,10 +35,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Product List</h1>
+      <h1>PRODUCT LIST</h1>
       <AddProductForm addProduct={addProduct} />
       <ProductsList products={products} deleteProduct={deleteProduct} />
-      <button onClick={clearProducts}>Clear All Products</button>
+      <button className="ClearProduct" onClick={clearProducts}>Clear All Products</button>
     </div>
   );
 };
